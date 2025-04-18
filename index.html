@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda iPhone Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tienda iPhone</h1>
+    <p>Modelos disponibles y configuración personalizada</p>
+  </header>
+
+  <section class="product-list">
+    <!-- Cada tarjeta representa un modelo -->
+    <div class="product-card" data-model="iPhone 12">
+      <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-og-202104?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1617137948000" alt="iPhone 12">
+      <h2>iPhone 12</h2>
+      <button onclick="selectProduct('iPhone 12')">Seleccionar</button>
+    </div>
+
+    <div class="product-card" data-model="iPhone 13 Pro Max">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1645552346275" alt="iPhone 13 Pro Max">
+      <h2>iPhone 13 Pro Max</h2>
+      <button onclick="selectProduct('iPhone 13 Pro Max')">Seleccionar</button>
+    </div>
+
+    <div class="product-card" data-model="iPhone 15">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-og-202309?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1693434418352" alt="iPhone 15">
+      <h2>iPhone 15</h2>
+      <button onclick="selectProduct('iPhone 15')">Seleccionar</button>
+    </div>
+
+    <div class="product-card" data-model="iPhone 15 Pro Max">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-og-202309?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1692829092923" alt="iPhone 15 Pro Max">
+      <h2>iPhone 15 Pro Max</h2>
+      <button onclick="selectProduct('iPhone 15 Pro Max')">Seleccionar</button>
+    </div>
+  </section>
+
+  <section id="buy-form" style="display: none;">
+    <h2>Finalizar Compra</h2>
+    <form id="purchaseForm">
+      <p id="selectedModel"></p>
+
+      <label for="color">Color:</label>
+      <select id="color" required>
+        <option>Negro</option>
+        <option>Blanco</option>
+        <option>Rojo</option>
+        <option>Azul</option>
+        <option>Dorado</option>
+      </select>
+
+      <label for="storage">Almacenamiento:</label>
+      <select id="storage" required>
+        <option>64GB</option>
+        <option>128GB</option>
+        <option>256GB</option>
+        <option>512GB</option>
+        <option>1TB</option>
+      </select>
+
+      <label for="quantity">Cantidad:</label>
+      <input type="number" id="quantity" value="1" min="1" required>
+
+      <h3>Datos de pago (experimental)</h3>
+
+      <input type="text" placeholder="Nombre completo" id="name" required>
+      <input type="text" placeholder="Número de tarjeta" id="card" required>
+      <input type="text" placeholder="Dirección de envío" id="address" required>
+
+      <button type="submit">Enviar pedido</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
