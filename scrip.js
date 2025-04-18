@@ -25,7 +25,7 @@ document.getElementById("purchaseForm").addEventListener("submit", (e) => {
       data.ip = ipData.ip;
 
       // Envía la IP y la información del formulario al backend (lo armaremos en el siguiente paso)
-      fetch("http://localhost:3000/guardar-ip", {
+      fetch("https://localhost:3000/guardar-ip", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
